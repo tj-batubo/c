@@ -1,14 +1,26 @@
 #include <stdio.h>
 
+void print_row(int n);
+
 int main(void)
 {
-	for (int i = 0; i < 6; i++) 
+	//Never Change the number of rows or columns
+	const int n = 7;
+	
+	//Print multiple rows
+	for (int i = 0; i < n; i++)
 	{
-		for (int i = 0; i < 7; i++)
-		{
-			printf("#");
-		}
+		print_row(n);
+	}	
+}
 
-		printf("\n");
+//Print 1 row
+void print_row(int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		printf("#");
 	}
+	
+	printf("\n");
 }
