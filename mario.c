@@ -1,26 +1,41 @@
+#include <cs50.h>
 #include <stdio.h>
 
-void print_row(int n);
+void print_pyramid(int psize);
 
 int main(void)
 {
-	//Never Change the number of rows or columns
-	const int n = 7;
-	
-	//Print multiple rows
-	for (int i = 0; i < n; i++)
-	{
-		print_row(n);
-	}	
+    while (true)
+    {
+	    int psize = get_int("Height: ");
+	    if (psize > 0)
+	    {
+		    print_pyramid(psize);
+		    break;
+	    } 
+	    else 
+	    {
+		    continue;
+	    }
+    }
 }
 
-//Print 1 row
-void print_row(int n)
+void print_pyramid(int psize)
 {
-	for (int i = 0; i < n; i++)
-	{
-		printf("#");
-	}
-	
-	printf("\n");
+	int count = psize - 1;
+    for (int i = 0; i < psize; i++)
+    {
+	    for (int k = count; k > i; k--)
+	    {
+		    printf(" ");
+	    }
+
+	    for (int j = 0; j <= i; j++)
+	    {
+		    printf("#");
+	    }
+	    
+	    printf("\n");
+    }
+
 }
