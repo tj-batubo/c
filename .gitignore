@@ -1,6 +1,10 @@
+# i'm a dumbass
+# ignore everything
 *
+
+# except anything with a file type in it's name
 !*.*
 
-libcs50-11.0.3/
-
-
+# except any subfolders
+# !*/
+# i guess i'll do it the hard way

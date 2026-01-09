@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: On average it has the longest running time on reveresed numbers and for bubble sort reversed numbers are it's worst case becuase it has to perform n operations on each interation 
+
+sort2 uses: Merge sort
+
+How do you know?: On average it performs the same across all numbers because merge sort has a tight bound time complexity of (n log n), so on average its still going to perform the same amount of operations no matter the order of the input
+
+sort3 uses: TODO
+
+How do you know?: TODO
