@@ -21,15 +21,10 @@ int main(void) {
   
   list = prepend(list, 6);
   
-  if (!list) {
-    exit(EXIT_FAILURE);
-  }
-
   printf("%i\n", list->data);
+  printf("%i\n", list->next->data);
   
-  destroy(list);
-  printf("%i\n", list->data);
-
+  destroy(list); 
   return 0;
 }
 
@@ -47,13 +42,12 @@ node* create(int value) {
 }
 
 node* prepend(node* head, int value) {
-  node *nnode = malloc(sizeof(node));
+  node *nnode = create(value);
 
   if (!nnode) {
-    return nnode;
+    return head;
   }
 
-  nnode->data = value;
   nnode->next = head;
 
   head = nnode;
